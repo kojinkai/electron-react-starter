@@ -7,7 +7,7 @@ export class Viewer extends Component {
   render() {
     return (
       <main role="main" className="viewer">
-        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/" component={Dashboard} />
       </main>
     );
   }

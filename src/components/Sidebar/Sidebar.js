@@ -6,7 +6,7 @@ export class Sidebar extends Component {
   render() {
     return (
       <nav className="sidebar">
-        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/">Dashboard</Link>
       </nav>
     );
   }
