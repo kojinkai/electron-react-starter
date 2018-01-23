@@ -1,3 +1,11 @@
+@import 'styles/grid';
+
 .sidebar {
+  display: flex;
   flex: 1;
+  flex-direction: column;
+
+  &__item {
+    padding: $gutter;
+  }
 }
