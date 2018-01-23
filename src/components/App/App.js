@@ -1,19 +1,22 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Masthead from '../Masthead/Masthead';
 import Sidebar from '../Sidebar/Sidebar';
 import Viewer from '../Viewer/Viewer';
+import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <div className="App">
-          <Masthead />
-          <Sidebar />
-          <Viewer />
-        </div>
-      </BrowserRouter>
+      <Fragment>
+        <Masthead />
+        <BrowserRouter>
+          <div className="app">
+            <Sidebar />
+            <Viewer />
+          </div>
+        </BrowserRouter>
+      </Fragment>
     );
   }
 }

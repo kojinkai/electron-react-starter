@@ -1,24 +1,19 @@
+@import 'styles/grid';
+@import 'styles/colors';
+
 .masthead {
-  text-align: center;
-}
-
-.masthead__logo {
-  animation: masthead-logo-spin infinite 2s linear;
-  height: 80px;
-}
-
-.masthead__header {
-  background-color: #222;
-  height: 150px;
+  background-color: $core;
+  display: flex;
+  height: 70px;
   padding: 20px;
   color: white;
-}
+  text-align: center;
 
-.masthead__title {
-  font-size: 1.5em;
-}
+  &__header {
+    font-size: 1.5em;
+  }
 
-@keyframes masthead-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  &__logo {
+    height: 30px;
+  }
 }
