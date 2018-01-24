@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Installation
 ```
-git clone git@github.com:kojinkai/electron-react-starter.git --depth=0
+git clone git@github.com:kojinkai/electron-react-starter.git your-folder-name --depth=0
 ```
 Then
 ```
