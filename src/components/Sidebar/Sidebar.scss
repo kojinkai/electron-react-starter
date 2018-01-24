@@ -1,9 +1,13 @@
 @import 'styles/grid';
+@import 'styles/colors';
 
 .sidebar {
+  background: $core;
+  color: $white;
   display: flex;
   flex: 1;
   flex-direction: column;
+  min-width: 220px;
 
   &__item {
     padding: $gutter;
