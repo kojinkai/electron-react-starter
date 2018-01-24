@@ -1,0 +1,19 @@
+@import 'styles/grid';
+@import 'styles/colors';
+
+.masthead {
+  background-color: $core;
+  display: flex;
+  height: 70px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+
+  &__header {
+    font-size: 1.5em;
+  }
+
+  &__logo {
+    height: 30px;
+  }
+}
