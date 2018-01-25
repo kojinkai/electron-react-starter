@@ -2,9 +2,12 @@
 @import 'styles/colors';
 
 .dashboard {
-  display: flex;
-  justify-content: space-between;
-  padding: $gutter;
+  padding: 3rem $gutter $gutter 3rem;
+  position: relative;
+
+  &__items {
+    display: flex;
+  }
 
   &__item {
     align-items: center;
@@ -12,9 +15,10 @@
     border-radius: 10px;
     color: $slate;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     height: 150px;
-    margin-left: $gutter;
+    margin-left: 3rem;
     width: 150px;
 
     &:first-child {
@@ -24,5 +28,34 @@
 
   &__item-inner {
     display: block;
+  }
+
+  &__add-icon {
+    align-items: center;
+    background: salmon;
+    border-radius: 50%;
+    bottom: 0;
+    display: flex;
+    height: 65px;
+    justify-content: space-around;
+    position: absolute;
+    right: $gutter;
+    top: -35px;
+    width: 65px;
+  }
+
+  &__add-icon-bar {
+    background: $white;
+    position: absolute;
+
+    &--horizontal {
+      height: 7px;
+      width: 40px;
+    }
+
+    &--vertical {
+      height: 40px;
+      width: 7px;
+    }
   }
 }

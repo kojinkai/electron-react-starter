@@ -6,13 +6,19 @@ export class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard">
-        {this.props.dashboardItems.map(item =>
-          <div className="dashboard__item">
-            <span className="dashboard__item-inner">
-              {item.name}
-            </span>
-          </div>
-        )}
+        <div className="dashboard__items">
+          {this.props.dashboardItems.map(item =>
+            <div key={item.id} className="dashboard__item">
+              <span className="dashboard__item-inner">
+                {item.name}
+              </span>
+            </div>
+          )}
+        </div>
+        <button className="dashboard__add-icon">
+          <span className="dashboard__add-icon-bar dashboard__add-icon-bar--horizontal"></span>
+          <span className="dashboard__add-icon-bar dashboard__add-icon-bar--vertical"></span>
+        </button>
       </div>
     );
   }
