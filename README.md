@@ -8,6 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * React 16
 * React Router
 * Hot Reloading in Electron
+* IndexedDB
 
 ## Installation
 ```
