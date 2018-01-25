@@ -1,5 +1,28 @@
 @import 'styles/grid';
+@import 'styles/colors';
 
 .dashboard {
+  display: flex;
+  justify-content: space-between;
   padding: $gutter;
+
+  &__item {
+    align-items: center;
+    border: 1px solid $uiborder;
+    border-radius: 10px;
+    color: $slate;
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    margin-left: $gutter;
+    width: 150px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__item-inner {
+    display: block;
+  }
 }

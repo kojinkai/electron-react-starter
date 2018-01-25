@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createStore, combineReducers, compose } from 'redux';
 import { Provider } from 'react-redux';
+import { fromJS } from 'immutable';
 import dashboard from './components/Dashboard/reducer';
 import './index.css';
 import App from './components/App/App';
@@ -19,7 +20,7 @@ configureIDB()
       middlewares.push(window.__REDUX_DEVTOOLS_EXTENSION__());
     }
 
-    const store = compose(...middlewares)(createStore)(rootReducer, { dashboard: initialState });
+    const store = compose(...middlewares)(createStore)(rootReducer, { dashboard: fromJS(initialState) });
 
     render(
       <Provider store={store}>
@@ -29,10 +30,6 @@ configureIDB()
     );
   })
   .catch(err => {
-    // render(
-    //   <div>Something went wrong returning your saved data {err}</div>,
-    //   document.getElementById('root')
-    // );
-    console.log('Something went wrong returning your saved data: ', err);
+    console.error('Something went wrong returning your saved data: ', err);
   });
 registerServiceWorker();
