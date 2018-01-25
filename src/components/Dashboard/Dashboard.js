@@ -15,7 +15,7 @@ export class Dashboard extends Component {
             </div>
           )}
         </div>
-        <button className="dashboard__add-icon">
+        <button className="dashboard__add-icon" onClick={this.props.addDashboardItem}>
           <span className="dashboard__add-icon-bar dashboard__add-icon-bar--horizontal"></span>
           <span className="dashboard__add-icon-bar dashboard__add-icon-bar--vertical"></span>
         </button>
@@ -26,6 +26,7 @@ export class Dashboard extends Component {
 
 Dashboard.propTypes = {
   dashboardItems: PropTypes.array.isRequired,
+  addDashboardItem: PropTypes.func.isRequired,
 };
 
 export default Dashboard;

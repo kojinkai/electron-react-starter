@@ -1,8 +1,13 @@
 import { connect } from 'react-redux';
 import Dashboard from './Dashboard';
+import { addDashboardItem } from './actions';
 
-const mapStateToProps = state => console.log('state is: ', state) || ({
+const mapStateToProps = state => ({
   dashboardItems: state.dashboard.toJS(),
 });
 
-export default connect(mapStateToProps)(Dashboard);
+const mapDispatchToProps = dispatch => ({
+  addDashboardItem: () => dispatch(addDashboardItem()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
