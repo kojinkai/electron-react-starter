@@ -1,9 +1,13 @@
 [![Build Status][travis-image]][travis-url]
 
-This project was cloned from [my electron starter project](https://github.com/kojinkai/electron-starter).
-kojinkai/electron-starter
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). See the readme for details on how to work with this scaffolding tool.
 
-# Royal Catalogue Management
+# Electron React Starter
+
+## Features
+* React 16
+* React Router
+* Hot Reloading in Electron
 
 ## Installation
 ```
@@ -20,10 +24,7 @@ yarn start
 
 This will start the Webpack dev server with everything from create-react-app baked in.
 
-# Trello
+Happy Hacking.
 
-The Project Planner can be found [here][trello]
-
-[trello]: https://trello.com/b/yemvt85K/royal-prototype
 [travis-image]: https://travis-ci.org/kojinkai/electron-starter.svg?branch=master
 [travis-url]: https://travis-ci.org/kojinkai/electron-starter
