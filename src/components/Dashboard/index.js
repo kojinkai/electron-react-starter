@@ -1,19 +1,13 @@
 import { connect } from 'react-redux';
 import Dashboard from './Dashboard';
-// import { addDashboardItem } from './actions';
-import { saveToDB } from '../../db/configureIDB';
+import { saveDashboardItem } from './actions';
 
 const mapStateToProps = state => ({
-  dashboardItems: state.dashboard.toJS(),
+  dashboardItems: state.dashboard.get('items').toJS(),
 });
 
 const mapDispatchToProps = dispatch => ({
-  addDashboardItem: () => {
-    const data = {
-      name: 'item y',
-    };
-    saveToDB(data);
-  }    
+  saveDashboardItem: (name = 'item x') => dispatch(saveDashboardItem(name)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

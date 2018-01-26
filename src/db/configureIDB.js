@@ -1,6 +1,10 @@
+import { generateID } from './generateID';
 const DASHBOARD_STORE_NAME = 'dashboard';
 const DB_NAME = 'MyStarterIDB';
-const seedProjects = [{ name: 'item  1', id: 1234 }, { name: 'item  2', id: 2345 }, { name: 'item  3', id: 3456 }];
+const seedProjects = [1, 2, 3].map((entry, idx) => {
+  return { name: `item  ${idx + 1}`, id: generateID() }
+});
+
 let dbConnection;
 
 export const configureIDB = () => {
@@ -34,11 +38,8 @@ export const configureIDB = () => {
       const transaction = target.result.transaction([DASHBOARD_STORE_NAME]);
       const objectStore = transaction.objectStore(DASHBOARD_STORE_NAME);
       const allProjects = objectStore.getAll();
-      
-      allProjects.onsuccess = ({ target }) => {
-        resolve(target.result);
-      };
 
+      allProjects.onsuccess = ({ target }) => resolve(target.result.sort((a, b) => a.name > b.name));
       allProjects.onerror = ({ target }) => reject(target);
     };
 
@@ -48,14 +49,14 @@ export const configureIDB = () => {
 
 export const saveToDB = ({
     name = 'item x',
-    id = window.crypto.getRandomValues(new Uint32Array(10))[3]
+    id = generateID()
   } = {}) => {
   return new Promise((resolve, reject) => {
     const transaction = dbConnection.transaction(DASHBOARD_STORE_NAME, 'readwrite');
     const objectStore = transaction.objectStore(DASHBOARD_STORE_NAME);
     const saveRequest = objectStore.add({ name, id });
 
-    saveRequest.onsuccess = event => console.log('resolving saveRequest') || resolve(event);
-    saveRequest.onerror = event => console.log('rejecting saveRequest') || reject(event);
+    saveRequest.onsuccess = event => resolve(event);
+    saveRequest.onerror = event => reject(event);
   });
 };

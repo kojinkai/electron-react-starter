@@ -6,8 +6,8 @@ class Masthead extends Component {
   render() {
     return (
       <header className="masthead">
+        <h1 className="masthead__header">Electron React Starter Kit</h1>
         <img src={logo} className="masthead__logo" alt="logo" />
-        <h1 className="masthead__header">Welcome to Electron React</h1>
       </header>
     )
   }
