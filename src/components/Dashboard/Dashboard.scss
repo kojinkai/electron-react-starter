@@ -1,5 +1,62 @@
 @import 'styles/grid';
+@import 'styles/colors';
 
 .dashboard {
-  padding: $gutter;
+  padding: 3rem $gutter $gutter 3rem;
+  position: relative;
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    align-items: center;
+    border: 1px solid $uiborder;
+    border-radius: 10px;
+    color: $slate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 150px;
+    margin-left: 3rem;
+    width: 150px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__item-inner {
+    display: block;
+  }
+
+  &__add-icon {
+    align-items: center;
+    background: salmon;
+    border-radius: 50%;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    height: 65px;
+    justify-content: space-around;
+    position: absolute;
+    right: $gutter;
+    top: -35px;
+    width: 65px;
+  }
+
+  &__add-icon-bar {
+    background: $white;
+    position: absolute;
+
+    &--horizontal {
+      height: 7px;
+      width: 40px;
+    }
+
+    &--vertical {
+      height: 40px;
+      width: 7px;
+    }
+  }
 }

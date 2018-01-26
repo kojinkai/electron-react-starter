@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import Dashboard from '../Dashboard/Dashboard';
+import Dashboard from '../Dashboard';
 import Settings from '../Settings/Settings';
 import './Viewer.css';
 
