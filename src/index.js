@@ -7,7 +7,7 @@ import dashboard from './components/Dashboard/reducer';
 import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
-import configureIDB from './configureIDB';
+import { configureIDB } from './db/configureIDB';
 
 
 configureIDB()
