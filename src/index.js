@@ -12,7 +12,7 @@ import configureIDB from './configureIDB';
 
 configureIDB()
   .then(initialState => {
-    console.log('initialState is: ', initialState);
+
     const rootReducer = combineReducers({ dashboard });
     const middlewares = [];
 
