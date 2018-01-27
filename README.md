@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Features
 * React 16
 * React Router
+* Redux Saga
 * Hot Reloading in Electron
 * IndexedDB
 
