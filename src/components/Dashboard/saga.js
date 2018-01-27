@@ -3,7 +3,7 @@ import { saveDashboardItem, completeSaveDashboardItem, failedSaveDashboardItem }
 import { saveToDB } from '../../db/configureIDB';
 import { getActionType } from '../../utils';
 
-function* saveItem(action) {
+export function* saveItem(action) {
    try {
       const saveRequest = yield call(saveToDB, action.payload);
       yield put(completeSaveDashboardItem(saveRequest));
@@ -12,7 +12,7 @@ function* saveItem(action) {
    }
 }
 
-function* dashboardSaga() {
+export function* dashboardSaga() {
   yield takeEvery(getActionType(saveDashboardItem), saveItem);
 }
 
