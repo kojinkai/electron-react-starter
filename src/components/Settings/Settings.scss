@@ -2,4 +2,10 @@
 
 .settings {
   padding: $gutter;
+  text-align: center;
+
+  &__icon {
+    display: block;
+    margin: 3rem auto;
+  }
 }

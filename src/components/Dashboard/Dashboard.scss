@@ -7,6 +7,9 @@
 
   &__items {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -3rem;
   }
 
   &__item {
@@ -18,12 +21,8 @@
     flex-direction: row;
     justify-content: space-around;
     height: 150px;
-    margin-left: 3rem;
+    margin: 0 0 3rem 3rem;
     width: 150px;
-
-    &:first-child {
-      margin-left: 0;
-    }
   }
 
   &__item-inner {
