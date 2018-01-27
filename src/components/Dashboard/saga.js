@@ -12,8 +12,8 @@ export function* saveItem(action) {
    }
 }
 
-export function* dashboardSaga() {
+export function* takeSaveDashboardItem() {
   yield takeEvery(getActionType(saveDashboardItem), saveItem);
 }
 
-export default dashboardSaga;
+export default takeSaveDashboardItem;
